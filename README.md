@@ -1,2 +1,2 @@
 # IFB
-## Ibitirama's Farfada Bot
+Ibitirama's Farfada Bot
