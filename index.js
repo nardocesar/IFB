@@ -14,3 +14,5 @@ app.post('/incoming', (req, res) => {
     twiml.message(`Eu sou o Danny e vou calcular sua pontuação no Ibitirama's Farfada game.`);
     res.end(twiml.toString());
 });
+
+app.listen(3000);
