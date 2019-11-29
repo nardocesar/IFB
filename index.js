@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
 app.post('/incoming', (req, res) => {
+    console.log(JSON.stringify(req.body));
     const twiml = new messagingResponse();
     twiml.message(`Eu sou o Danny e vou calcular sua pontuação no Ibitirama's Farfada game. Você falou *${req.body.Body}*`);
     
