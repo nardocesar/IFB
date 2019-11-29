@@ -17,7 +17,7 @@ app.post('/incoming', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    response.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 app.listen(process.env.PORT || 1337, () => {
