@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
     response.sendFile(__dirname + '/views/index.html');
 });
 
-app.listen(1337, () => {
+app.listen(process.env.PORT || 1337, () => {
     console.log('Express server listening on port 1337');
 });
