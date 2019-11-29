@@ -15,4 +15,10 @@ app.post('/incoming', (req, res) => {
     res.end(twiml.toString());
 });
 
-app.listen(3000);
+app.get('/', (req, res) => {
+    response.sendFile(__dirname + '/views/index.html');
+});
+
+app.listen(3000, () => {
+    console.log('BOT running.');
+});
