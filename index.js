@@ -8,6 +8,8 @@ const messagingResponse = require('twilio').twiml.MessagingResponse;
 // APP
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 app.post('/incoming', (req, res) => {
     const twiml = new messagingResponse();
     twiml.message(`Eu sou o Danny e vou calcular sua pontuação no Ibitirama's Farfada game.`);
