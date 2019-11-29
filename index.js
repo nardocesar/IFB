@@ -1,5 +1,6 @@
 const https = require('https');
 const express = require('express');
+const bodyParser = require('body-parser');
 
 
 // TWILIO SETTINGS
@@ -7,6 +8,7 @@ const messagingResponse = require('twilio').twiml.MessagingResponse;
 
 // APP
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + '/public'));
 
