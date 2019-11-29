@@ -2,7 +2,7 @@ const express = require('express');
 
 
 // TWILIO SETTINGS
-const twilioSID = 'ACc62dea67502080501c0b261bff13768f', twilioToken = '2a05e24a01657898625b3c64f524a27f';
+const twilioSID = process.env.SID, twilioToken = process.env.TOKEN;
 const twilioClient = require('twilio')(twilioSID, twilioToken);
 const messagingResponse = require('twilio').twiml.MessagingResponse;
 
